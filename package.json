@@ -1,30 +1,28 @@
 {
   "name": "fogyasztasi-riport",
-  "version": "1.0.2",
-  "description": "Fogyasztási riport generátor",
+  "version": "1.0.0",
+  "description": "Fogyasztasi riport generator",
+  "author": "Riport App",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win --x64",
-    "build-dir": "electron-builder --win --x64 --dir"
+    "build": "electron-builder --win --x64"
   },
   "build": {
     "appId": "hu.riport.fogyasztasi",
-    "productName": "Fogyasztási Riport",
+    "productName": "Fogyasztasi Riport",
+    "asar": true,
     "win": {
-      "target": "nsis",
-      "icon": "assets/icon.ico"
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "installerLanguages": ["hu"],
-      "language": "1038"
-    },
-    "publish": {
-      "provider": "github",
-      "owner": "GITHUB_FELHASZNALONEV",
-      "repo": "fogyasztasi-riport"
+      "allowToChangeInstallationDirectory": true
     }
   },
   "devDependencies": {
