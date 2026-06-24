@@ -1,0 +1,35 @@
+{
+  "name": "fogyasztasi-riport",
+  "version": "1.0.0",
+  "description": "Fogyasztasi riport generator",
+  "author": "Riport App",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "hu.riport.fogyasztasi",
+    "productName": "Fogyasztasi Riport",
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.0"
+  }
+}
