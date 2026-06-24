@@ -1,6 +1,6 @@
 {
   "name": "fogyasztasi-riport",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fogyasztasi riport generator",
   "author": "Riport App",
   "main": "src/main.js",
